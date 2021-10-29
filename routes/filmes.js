@@ -17,9 +17,9 @@ router.post("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  const filmeEncontrado = filmes.find((filme) => filme.id === id);
-  res.send(filmeEncontrado);
+  const idParam = req.params.id;
+  const filme = filmes.find((filme) => filme.id == idParam);
+  res.send(filme);
 });
 
 export default router;
